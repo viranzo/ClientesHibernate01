@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-abr-2014 19:43:10 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="clienteshibernate01.Cliente" table="cliente" catalog="clientesdb">
+        <id name="dni" type="int">
+            <column name="DNI" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="50" not-null="true" />
+        </property>
+        <property name="ape1" type="string">
+            <column name="Ape1" length="50" not-null="true" />
+        </property>
+        <property name="ape2" type="string">
+            <column name="Ape2" length="50" />
+        </property>
+        <property name="nick" type="string">
+            <column name="Nick" length="10" not-null="true" unique="true" />
+        </property>
+        <property name="passwd" type="string">
+            <column name="Passwd" length="10" not-null="true" />
+        </property>
+        <property name="saldo" type="java.lang.Float">
+            <column name="Saldo" precision="12" scale="0" />
+        </property>
+        <property name="moroso" type="java.lang.Integer">
+            <column name="Moroso" />
+        </property>
+    </class>
+</hibernate-mapping>
